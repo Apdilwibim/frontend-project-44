@@ -6,3 +6,5 @@ publish:
 	npm publish --dry-run
 lint:
 	npx eslint .
+ 
+https://asciinema.org/a/RrQ4C9fSaMtXo8yws6AZQHZ2H
