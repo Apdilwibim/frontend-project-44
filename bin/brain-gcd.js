@@ -4,7 +4,7 @@ import {
   random, question, userName, greeting, gcd,
 } from '../src/index.js';
 
-const calc = () => {
+const gcdGame = () => {
   let win = 0;
   greeting();
   const name = userName();
@@ -29,4 +29,4 @@ const calc = () => {
   }
 };
 
-calc();
+gcdGame();

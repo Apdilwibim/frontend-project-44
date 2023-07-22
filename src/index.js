@@ -50,6 +50,28 @@ export const gcd = (a, b) => {
   return result;
 };
 
+export const progression = () => {
+  const arr = [];
+  const result = [];
+  let rightAnswer = 0;
+  let choosenIndex = 0;
+  const firstNumber = random(0, 50);
+  const step = random(1, 5);
+  for (let i = firstNumber; arr.length < 10; i += step) {
+    arr.push(i);
+  }
+  choosenIndex = random(0, 10);
+  if (choosenIndex === 0) {
+    rightAnswer = arr[choosenIndex + 1] - step;
+  } else {
+    rightAnswer = arr[choosenIndex - 1] + step;
+  }
+  arr.splice(choosenIndex, 1, '...');
+  result.push(`${rightAnswer}`);
+  result.push(arr);
+  return result;
+};
+
 export const greeting = () => console.log('Welcome to the Brain Games!');
 export const lowerAnswer = (string) => string.toLowerCase();
 export const userName = () => readlineSync.question('May I have your name? ');
