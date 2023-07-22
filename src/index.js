@@ -35,6 +35,21 @@ export const resultOfExpression = (a, operation, b) => {
   return result;
 };
 
+export const gcd = (a, b) => {
+  let first = a;
+  let second = b;
+  let result = 0;
+  while (first !== second) {
+    if (first > second) {
+      first -= second;
+    } else {
+      second -= first;
+    }
+  }
+  result = first;
+  return result;
+};
+
 export const greeting = () => console.log('Welcome to the Brain Games!');
 export const lowerAnswer = (string) => string.toLowerCase();
 export const userName = () => readlineSync.question('May I have your name? ');

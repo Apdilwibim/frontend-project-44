@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {
-  random, question, userName, greeting, randomOperation, resultOfExpression,
+  random, question, userName, greeting, gcd,
 } from '../src/index.js';
 
 const calc = () => {
@@ -9,12 +9,11 @@ const calc = () => {
   greeting();
   const name = userName();
   console.log(`Hi ${name}!`);
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
-    const arr = [random(0, 100), randomOperation(), random(0, 100)];
-    const expression = `${arr[0]} ${arr[1]} ${arr[2]}`;
-    const result = resultOfExpression(...arr);
-    const answer = question(`Question: ${expression}\nAnswer: `);
+    const arr = [random(0, 100), random(0, 100)];
+    const result = gcd(arr[0], arr[1]);
+    const answer = question(`Question: ${arr[0]} ${arr[1]}\nAnswer: `);
     switch (Number(answer)) {
       case result:
         console.log('Correct!');
