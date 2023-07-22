@@ -17,6 +17,18 @@ export const isEven = (a) => {
   return result;
 };
 
+export const isPrime = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export const resultOfExpression = (a, operation, b) => {
   let result = 0;
   switch (operation) {
