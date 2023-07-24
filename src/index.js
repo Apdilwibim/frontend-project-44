@@ -78,7 +78,7 @@ export const progression = () => {
   } else {
     rightAnswer = arr[choosenIndex - 1] + step;
   }
-  arr.splice(choosenIndex, 1, '...');
+  arr.splice(choosenIndex, 1, '..');
   result.push(`${rightAnswer}`);
   result.push(arr);
   return result;
