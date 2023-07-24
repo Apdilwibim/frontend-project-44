@@ -84,6 +84,16 @@ export const progression = () => {
   return result;
 };
 
+export const switchCompare = (answerOfUser, res, name) => {
+  switch (Number(answerOfUser)) {
+    case res:
+      console.log('Correct!');
+      return 1;
+    default:
+      console.log(`${answerOfUser} is wrong answer ;(. Correct answer was ${res}.\nLet's try again, ${name}!`);
+  }
+};
+
 export const greeting = () => console.log('Welcome to the Brain Games!');
 export const lowerAnswer = (string) => string.toLowerCase();
 export const userName = () => readlineSync.question('May I have your name? ');
