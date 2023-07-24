@@ -8,7 +8,7 @@ export default () => {
   let win = 0;
   greeting();
   const name = userName();
-  console.log(`Hi ${name}!`);
+  console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     const arr = [random(0, 100), random(0, 100)];

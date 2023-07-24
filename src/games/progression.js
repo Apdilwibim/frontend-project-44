@@ -8,7 +8,7 @@ export default () => {
   let win = 0;
   greeting();
   const name = userName();
-  console.log(`Hi ${name}!`);
+  console.log(`Hello, ${name}!`);
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const temp = progression();

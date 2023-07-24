@@ -9,7 +9,7 @@ export default () => {
   const name = userName('May I have your name? ');
   const wrong = ' is wrong answer ;(. Correct answer was';
   let win = 0;
-  console.log(`Hi ${name}!`);
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const num = random(1, 100);

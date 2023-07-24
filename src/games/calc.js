@@ -8,7 +8,7 @@ export default () => {
   let win = 0;
   greeting();
   const name = userName();
-  console.log(`Hi ${name}!`);
+  console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const arr = [random(0, 100), randomOperation(), random(0, 100)];
