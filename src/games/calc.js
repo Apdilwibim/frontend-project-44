@@ -21,7 +21,7 @@ export default () => {
         win += 1;
         break;
       default:
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${name}`);
+        console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${name}!`);
         return;
     }
   }
