@@ -14,7 +14,7 @@ export default () => {
     const arr = [random(0, 100), random(0, 100)];
     const result = gcd(arr[0], arr[1]);
     const answer = question(`Question: ${arr[0]} ${arr[1]}\nAnswer: `);
-    const temp = switchCompare(Number(answer), result, name);
+    const temp = switchCompare(answer, result, name);
     if (temp === 1) {
       win += 1;
     } else {
