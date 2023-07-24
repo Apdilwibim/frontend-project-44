@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {
-  random, question, userName, greeting, randomOperation, resultOfExpression,
+  random, question, userName, greeting, randomOperation, resultOfExpression, switchCompare,
 } from '../index.js';
 
 export default () => {
@@ -15,14 +15,11 @@ export default () => {
     const expression = `${arr[0]} ${arr[1]} ${arr[2]}`;
     const result = resultOfExpression(...arr);
     const answer = question(`Question: ${expression}\nAnswer: `);
-    switch (Number(answer)) {
-      case result:
-        console.log('Correct!');
-        win += 1;
-        break;
-      default:
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${name}!`);
-        return;
+    const temp = switchCompare(answer, result, name);
+    if (temp === 1) {
+      win += 1;
+    } else {
+      return;
     }
   }
   if (win === 3) {
