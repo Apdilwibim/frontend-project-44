@@ -92,6 +92,7 @@ export const switchCompare = (answerOfUser, res, name) => {
     default:
       console.log(`${answerOfUser} is wrong answer ;(. Correct answer was ${res}.\nLet's try again, ${name}!`);
   }
+  return 0;
 };
 
 export const greeting = () => console.log('Welcome to the Brain Games!');
