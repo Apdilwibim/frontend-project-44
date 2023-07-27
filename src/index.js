@@ -15,7 +15,7 @@ export default (description, quantityOfIteration, genOneRound) => {
           countOfWins += 1;
           break;
         default:
-          console.log(`${answerOfUser} is wrong answer ;(. Correct answer was '${roundArr[1]}'.`);
+          console.log(`${answerOfUser} is wrong answer ;(. Correct answer was '${roundArr[1]}'.\nLet's try again, ${userName}!`);
           return;
       }
     } else {
