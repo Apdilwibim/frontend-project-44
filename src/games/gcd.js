@@ -3,9 +3,9 @@ import genMainLogic from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (a, b) => {
-  let first = a;
-  let second = b;
+const getGcd = (num1, num2) => {
+  let first = num1;
+  let second = num2;
   let result = 0;
   while (first !== second) {
     if (first > second) {

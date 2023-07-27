@@ -13,6 +13,5 @@ const genOneRound = () => {
 };
 
 export default () => {
-  const result = genMainLogic(description, 3, genOneRound);
-  return result;
+  genMainLogic(description, 3, genOneRound);
 };

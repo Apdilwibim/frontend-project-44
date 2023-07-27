@@ -2,10 +2,6 @@
 [![Actions Status](https://github.com/Apdilwibim/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Apdilwibim/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e859be657da4909465d7/maintainability)](https://codeclimate.com/github/Apdilwibim/frontend-project-44/maintainability)
 
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/ILokalin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/ILokalin/frontend-project-lvl1/actions)
-
 ## Учебный проект в рамках обучения на платформе Hexlet.io
 Проект представляет из себя набор из пяти математических игр: проверка на четность, калькулятор, наибольший общий делитель, арифметическая прогрессия, простое ли число.
 
