@@ -1,28 +1,42 @@
-#!/usr/bin/env node
+import getRandomNubmer from '../utils.js';
+import genMainLogic from '../index.js';
 
-import {
-  random, question, userName, greeting, randomOperation, resultOfExpression, switchCompare,
-} from '../index.js';
+const description = 'What is the result of the expression?';
+
+const getRandomOperation = () => {
+  const arr = ['-', '+', '*'];
+  return arr[getRandomNubmer(0, 2)];
+};
+
+const getResultOfExpression = (a, operation, b) => {
+  let result = 0;
+  switch (operation) {
+    case '+':
+      result = a + b;
+      break;
+    case '-':
+      result = a - b;
+      break;
+    case '*':
+      result = a * b;
+      break;
+    default:
+      console.log('default');
+  }
+  return result;
+};
+
+const genOneRound = () => {
+  const result = [];
+  const num1 = getRandomNubmer(1, 100);
+  const num2 = getRandomNubmer(1, 100);
+  const operation = getRandomOperation();
+  const expression = `${num1} ${operation} ${num2}`;
+  const rightAnswer = getResultOfExpression(num1, operation, num2);
+  result.push(expression, rightAnswer);
+  return result;
+};
 
 export default () => {
-  let win = 0;
-  greeting();
-  const name = userName();
-  console.log(`Hello, ${name}!`);
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
-    const arr = [random(0, 100), randomOperation(), random(0, 100)];
-    const expression = `${arr[0]} ${arr[1]} ${arr[2]}`;
-    const result = resultOfExpression(...arr);
-    const answer = question(`Question: ${expression}\nAnswer: `);
-    const temp = switchCompare(answer, result, name);
-    if (temp === 1) {
-      win += 1;
-    } else {
-      return;
-    }
-  }
-  if (win === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  genMainLogic(description, 3, genOneRound);
 };
