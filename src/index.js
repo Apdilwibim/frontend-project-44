@@ -3,12 +3,11 @@ import greet from './cli.js';
 
 export default (description, quantityOfIteration, genOneRound) => {
   let countOfWins = 0;
-  greet();
+  const userName = greet();
   console.log(description);
   for (let i = 0; i < quantityOfIteration; i += 1) {
     const roundArr = genOneRound();
     const answerOfUser = readlineSync.question(`Question: ${roundArr[0]}\nAnswer: `);
-    console.log(roundArr);
     if (typeof roundArr[1] === 'number') {
       switch (Number(answerOfUser)) {
         case roundArr[1]:
@@ -26,9 +25,12 @@ export default (description, quantityOfIteration, genOneRound) => {
           countOfWins += 1;
           break;
         default:
-          console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${roundArr[1]}'.`);
+          console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${roundArr[1]}'.\nLet's try again, ${userName}!`);
           return;
       }
     }
+  }
+  if (countOfWins === 3) {
+    console.log(`Congratulations, ${userName}!`);
   }
 };
