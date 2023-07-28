@@ -7,18 +7,20 @@
 
 ## Requirements
 
+```
 Node.js 13.2.0 and up
 ```
 
-## Install
-В разделе установки ожидаются примеры команд. Обязательно стоит указать назначение команды и ппривести ее пример так, чтобы она выделялась в тексте - используем форматированние для кода. Примеры ниже:
+## Install 
 
 ### clone project
+
 ```
 git clone https://github.com/ILokalin/frontend-project-lvl1.git
-```
+``
 
 ### install
+
 ```
 npm i
 ```
@@ -26,22 +28,18 @@ npm i
 ## Run
 
 ### Names
-
-games
 ``` 
+games
 even
-```
 calc
-```
 gcd
-```
 progression
-```
 prime
 ```
 
 ### run game
 
+```
 brain- + name
 ```
 
