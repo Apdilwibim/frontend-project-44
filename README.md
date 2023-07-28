@@ -43,9 +43,9 @@ prime
 brain- + name
 ```
 
-## Asciinema
+## Show on Asciinema
 
-Реализация приветствия:
+Реализация приветствия brain-games:
 
 [![asciicast](https://asciinema.org/a/REM1phvbCLp0JiqKx04AJRdTP.svg)](https://asciinema.org/a/REM1phvbCLp0JiqKx04AJRdTP)
 
