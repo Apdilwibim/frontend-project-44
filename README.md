@@ -17,9 +17,9 @@ Node.js 13.2.0 and up
 
 ```
 git clone https://github.com/ILokalin/frontend-project-lvl1.git
-``
+```
 
-### install
+### install package
 
 ```
 npm i
