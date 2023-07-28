@@ -6,14 +6,16 @@
 Проект представляет из себя набор из пяти математических игр: проверка на четность, калькулятор, наибольший общий делитель, арифметическая прогрессия, простое ли число.
 
 ## Requirements
-В разделе минимальных требований указываем ПО и версию, которое необходимо для запуска приложения. Например, необходима установка node.js. Версия - не все версии поддерживали импорт и было бы полезно указать версию, после которой приложение будет работать.
+
+Node.js 13.2.0 and up
+```
 
 ## Install
 В разделе установки ожидаются примеры команд. Обязательно стоит указать назначение команды и ппривести ее пример так, чтобы она выделялась в тексте - используем форматированние для кода. Примеры ниже:
 
-### назначение команды
+### clone project
 ```
-команда
+git clone https://github.com/ILokalin/frontend-project-lvl1.git
 ```
 
 ### install
@@ -21,24 +23,50 @@
 npm i
 ```
 
-## Пример размещения asciinema
+## Run
+
+### Names
+
+games
+``` 
+even
+```
+calc
+```
+gcd
+```
+progression
+```
+prime
+```
+
+### run game
+
+brain- + name
+```
+
+## Asciinema
+
+Реализация приветствия:
+
+[![asciicast](https://asciinema.org/a/REM1phvbCLp0JiqKx04AJRdTP.svg)](https://asciinema.org/a/REM1phvbCLp0JiqKx04AJRdTP)
 
 Реализация игры brain-even: 
 
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/SIe4Bp185gIl3MRB7plXii6tU.svg)](https://asciinema.org/a/SIe4Bp185gIl3MRB7plXii6tU)
 
 Реализация игры brain-calc: 
 
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/DX6AjzqlRtK2K96vgg7invwWo.svg)](https://asciinema.org/a/DX6AjzqlRtK2K96vgg7invwWo)
 
 Реализация игры brain-gcd: 
 
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/ExAZ5hqttIbeRjt9FbH6HtbbB.svg)](https://asciinema.org/a/ExAZ5hqttIbeRjt9FbH6HtbbB)
 
 Реализация игры brain-progression:
 
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/tZGJ05RAIzJ9f4bBkDGhhl67x.svg)](https://asciinema.org/a/tZGJ05RAIzJ9f4bBkDGhhl67x)
 
 Реализация игры brain-prime:
 
-[![asciicast](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7.svg)](https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7)
+[![asciicast](https://asciinema.org/a/NugBs3e4NE2bzffdPWuyOJCzF.svg)](https://asciinema.org/a/NugBs3e4NE2bzffdPWuyOJCzF)

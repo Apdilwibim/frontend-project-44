@@ -8,13 +8,13 @@ export default (description, quantityOfIteration, genOneRound) => {
   for (let i = 0; i < quantityOfIteration; i += 1) {
     const roundArr = genOneRound();
     const answerOfUser = readlineSync.question(`Question: ${roundArr[0]}\nAnswer: `);
-    let compare = 0;
+    let revisedAnswer = 0;
     if (typeof roundArr[1] === 'number') {
-      compare = Number(answerOfUser);
+      revisedAnswer = Number(answerOfUser);
     } else {
-      compare = answerOfUser.toLowerCase();
+      revisedAnswer = answerOfUser.toLowerCase();
     }
-    switch (compare) {
+    switch (revisedAnswer) {
       case roundArr[1]:
         console.log('Correct!');
         countOfWins += 1;
