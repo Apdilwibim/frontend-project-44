@@ -13,5 +13,5 @@ const genOneRound = () => {
 };
 
 export default () => {
-  genMainLogic(description, 3, genOneRound);
+  genMainLogic(description, genOneRound);
 };

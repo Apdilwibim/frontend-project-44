@@ -24,10 +24,10 @@ const genOneRound = () => {
     rightAnswer = progression[randomPosition - 1] + step;
   }
   progression.splice(randomPosition, 1, '..');
-  result.push(progression.join(' '), rightAnswer);
+  result.push(progression.join(' '), String(rightAnswer));
   return result;
 };
 
 export default () => {
-  genMainLogic(description, 3, genOneRound);
+  genMainLogic(description, genOneRound);
 };

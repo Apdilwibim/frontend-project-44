@@ -23,11 +23,11 @@ const genOneRound = () => {
   const num1 = getRandomNubmer(1, 100);
   const num2 = getRandomNubmer(1, 100);
   const expression = `${num1} ${num2}`;
-  const rightAnswer = getGcd(num1, num2);
+  const rightAnswer = String(getGcd(num1, num2));
   result.push(expression, rightAnswer);
   return result;
 };
 
 export default () => {
-  genMainLogic(description, 3, genOneRound);
+  genMainLogic(description, genOneRound);
 };

@@ -1,30 +1,22 @@
 import readlineSync from 'readline-sync';
-import greet from './cli.js';
 
-export default (description, quantityOfIteration, genOneRound) => {
-  let countOfWins = 0;
-  const userName = greet();
+const iterationsCount = 3;
+
+export default (description, genOneRound) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   console.log(description);
-  for (let i = 0; i < quantityOfIteration; i += 1) {
-    const roundArr = genOneRound();
-    const answerOfUser = readlineSync.question(`Question: ${roundArr[0]}\nAnswer: `);
-    let revisedAnswer = 0;
-    if (typeof roundArr[1] === 'number') {
-      revisedAnswer = Number(answerOfUser);
+  for (let i = 0; i < iterationsCount; i += 1) {
+    const [expression, rightAnswer] = genOneRound();
+    const answerOfUser = readlineSync.question(`Question: ${expression}\nAnswer: `);
+    if (rightAnswer === answerOfUser) {
+      console.log('Correct!');
     } else {
-      revisedAnswer = answerOfUser.toLowerCase();
-    }
-    switch (revisedAnswer) {
-      case roundArr[1]:
-        console.log('Correct!');
-        countOfWins += 1;
-        break;
-      default:
-        console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${roundArr[1]}'.\nLet's try again, ${userName}!`);
-        return;
+      console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${rightAnswer}.'`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
   }
-  if (countOfWins === 3) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
