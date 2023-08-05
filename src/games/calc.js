@@ -5,21 +5,16 @@ const description = 'What is the result of the expression?';
 const operations = ['-', '+', '*'];
 
 const getResultOfExpression = (a, operation, b) => {
-  let result = 0;
   switch (operation) {
     case '+':
-      result = a + b;
-      break;
+      return a + b;
     case '-':
-      result = a - b;
-      break;
+      return a - b;
     case '*':
-      result = a * b;
-      break;
+      return a * b;
     default:
-      console.log('default');
+      throw new Error(`Unknown order state: '${operation}'!`);
   }
-  return result;
 };
 
 const genOneRound = () => {
