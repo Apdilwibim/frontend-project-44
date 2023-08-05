@@ -19,13 +19,11 @@ const getGcd = (num1, num2) => {
 };
 
 const genOneRound = () => {
-  const result = [];
   const num1 = getRandomNubmer(1, 100);
   const num2 = getRandomNubmer(1, 100);
   const expression = `${num1} ${num2}`;
   const rightAnswer = String(getGcd(num1, num2));
-  result.push(expression, rightAnswer);
-  return result;
+  return [expression, rightAnswer];
 };
 
 export default () => {

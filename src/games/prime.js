@@ -16,12 +16,10 @@ const isPrime = (num) => {
 };
 
 const genOneRound = () => {
-  const result = [];
   const num = getRandomNubmer(1, 100);
   const expression = num;
   const rightAnswer = isPrime(num) ? 'yes' : 'no';
-  result.push(expression, rightAnswer);
-  return result;
+  return [expression, rightAnswer];
 };
 
 export default () => {

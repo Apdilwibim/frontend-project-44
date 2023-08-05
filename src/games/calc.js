@@ -18,14 +18,12 @@ const getResultOfExpression = (a, operation, b) => {
 };
 
 const genOneRound = () => {
-  const result = [];
   const num1 = getRandomNubmer(1, 100);
   const num2 = getRandomNubmer(1, 100);
   const operation = operations[getRandomNubmer(0, operations.length - 1)];
   const expression = `${num1} ${operation} ${num2}`;
   const rightAnswer = getResultOfExpression(num1, operation, num2);
-  result.push(expression, String(rightAnswer));
-  return result;
+  return [expression, String(rightAnswer)];
 };
 
 export default () => {

@@ -13,7 +13,6 @@ const genProgression = (startNum, lengthOfProgression, step) => {
 
 const genOneRound = () => {
   let rightAnswer = 0;
-  const result = [];
   const startNum = getRandomNubmer(1, 100);
   const step = getRandomNubmer(1, 5);
   const randomPosition = getRandomNubmer(0, 10);
@@ -24,8 +23,7 @@ const genOneRound = () => {
     rightAnswer = progression[randomPosition - 1] + step;
   }
   progression.splice(randomPosition, 1, '..');
-  result.push(progression.join(' '), String(rightAnswer));
-  return result;
+  return [progression.join(' '), rightAnswer];
 };
 
 export default () => {
