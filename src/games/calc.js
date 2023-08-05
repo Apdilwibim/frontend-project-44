@@ -13,7 +13,7 @@ const getResultOfExpression = (a, operation, b) => {
     case '*':
       return a * b;
     default:
-      throw new Error(`Unknown order state: '${operation}'!`);
+      throw new Error(`Unknown operation: '${operation}'!`);
   }
 };
 
@@ -21,7 +21,7 @@ const genOneRound = () => {
   const result = [];
   const num1 = getRandomNubmer(1, 100);
   const num2 = getRandomNubmer(1, 100);
-  const operation = operations[getRandomNubmer(0, operations.length)];
+  const operation = operations[getRandomNubmer(0, operations.length - 1)];
   const expression = `${num1} ${operation} ${num2}`;
   const rightAnswer = getResultOfExpression(num1, operation, num2);
   result.push(expression, String(rightAnswer));
