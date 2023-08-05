@@ -1,5 +1,5 @@
 import getRandomNubmer from '../utils.js';
-import genMainLogic from '../index.js';
+import runGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -27,5 +27,5 @@ const genOneRound = () => {
 };
 
 export default () => {
-  genMainLogic(description, genOneRound);
+  runGame(description, genOneRound);
 };

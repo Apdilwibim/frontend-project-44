@@ -1,5 +1,5 @@
 import getRandomNubmer from '../utils.js';
-import genMainLogic from '../index.js';
+import runGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -23,5 +23,5 @@ const genOneRound = () => {
 };
 
 export default () => {
-  genMainLogic(description, genOneRound);
+  runGame(description, genOneRound);
 };
