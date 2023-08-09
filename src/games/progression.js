@@ -16,8 +16,8 @@ const genOneRound = () => {
   const start = getRandomNubmer(1, 100);
   const step = getRandomNubmer(1, 5);
   const progression = genProgression(start, lengthProgression, step);
-  const randomPosition = getRandomNubmer(0, progression.length - 1);
-  const rightAnswer = String(progression.splice(randomPosition, 1, '..'));
+  const hiddenPosition = getRandomNubmer(0, progression.length - 1);
+  const rightAnswer = String(progression.splice(hiddenPosition, 1, '..'));
   return [progression.join(' '), rightAnswer];
 };
 
