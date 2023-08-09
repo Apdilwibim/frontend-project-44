@@ -16,8 +16,8 @@ const genOneRound = () => {
   let rightAnswer = 0;
   const start = getRandomNubmer(1, 100);
   const step = getRandomNubmer(1, 5);
-  const randomPosition = getRandomNubmer(0, 10);
   const progression = genProgression(start, lengthProgression, step);
+  const randomPosition = getRandomNubmer(0, progression.length - 1);
   if (randomPosition === 0) {
     rightAnswer = progression[randomPosition + 1] - step;
   } else {
