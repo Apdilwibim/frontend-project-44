@@ -4,7 +4,7 @@ import runGame from '../index.js';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  const limit = Math.sqrt(Number(num));
+  const limit = Math.sqrt(num);
   if (num <= 1) {
     return false;
   }
@@ -17,9 +17,9 @@ const isPrime = (num) => {
 };
 
 const genOneRound = () => {
-  const number = String(getRandomNubmer(1, 100));
+  const number = getRandomNubmer(1, 100);
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
-  return [number, rightAnswer];
+  return [String(number), rightAnswer];
 };
 
 export default () => {
