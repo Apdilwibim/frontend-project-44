@@ -3,13 +3,13 @@ import runGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrime = (num) => {
-  const limit = Math.sqrt(num);
-  if (num <= 1) {
+const isPrime = (number) => {
+  const limit = Math.sqrt(number);
+  if (number <= 1) {
     return false;
   }
   for (let i = 2; i <= limit; i += 1) {
-    if (num % i === 0) {
+    if (number % i === 0) {
       return false;
     }
   }
@@ -17,9 +17,9 @@ const isPrime = (num) => {
 };
 
 const genOneRound = () => {
-  const number = getRandomNubmer(1, 100);
-  const rightAnswer = isPrime(number) ? 'yes' : 'no';
-  return [String(number), rightAnswer];
+  const number = String(getRandomNubmer(1, 100));
+  const rightAnswer = isPrime(Number(number)) ? 'yes' : 'no';
+  return [number, rightAnswer];
 };
 
 export default () => {

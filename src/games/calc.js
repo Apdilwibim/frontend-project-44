@@ -22,8 +22,8 @@ const genOneRound = () => {
   const number2 = getRandomNubmer(1, 100);
   const operation = operations[getRandomNubmer(0, operations.length - 1)];
   const expression = `${number1} ${operation} ${number2}`;
-  const rightAnswer = getResultOfExpression(number1, operation, number2);
-  return [expression, String(rightAnswer)];
+  const rightAnswer = String(getResultOfExpression(number1, operation, number2));
+  return [expression, rightAnswer];
 };
 
 export default () => {
