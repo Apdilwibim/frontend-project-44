@@ -9,9 +9,9 @@ export default (description, genOneRound) => {
   console.log(description);
   for (let i = 0; i < iterationsCount; i += 1) {
     const [expression, rightAnswer] = genOneRound();
-    const answerOfUser = readlineSync.question(`Question: ${expression}\nAnswer: `);
-    if (rightAnswer !== answerOfUser.toLowerCase()) {
-      console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${rightAnswer}.'`);
+    const userAnswer = readlineSync.question(`Question: ${expression}\nAnswer: `);
+    if (rightAnswer !== userAnswer.toLowerCase()) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}.'`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
